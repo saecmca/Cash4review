@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Cash4Review</string>
+    <string-array name="arr_category">
+        <item>CATEGORY</item>
+        <item>Rice</item>
+        <item>Roti</item>
+        <item>Desserts</item>
+    </string-array>
+    <string-array name="arr_item">
+        <item>PRODUCTS / ITEMS</item>
+        <item>Veg - Briyani</item>
+        <item>Mutton Briyani</item>
+        <item>Chicken Briyani</item>
+    </string-array>
+    <string-array name="loc_item">
+        <item>LOCATIONS</item>
+        <item>Velachery</item>
+        <item>Nungambakkam</item>
+        <item>Sholinganalur</item>
+    </string-array>
+
+    <string name="rs">200 \u20B9</string>
+</resources>

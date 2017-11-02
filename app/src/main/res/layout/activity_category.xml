@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.cash4review.category.HomeScreen"
+    tools:ignore="MissingPrefix">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                fontPath="fonts/GT_Pressura_Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="CATEGORY"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ic_login" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/toolbar"
+        android:src="@drawable/ic_cat">
+
+    </ImageView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rclCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layBottom"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/_60sdp" />
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="@dimen/_190sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/search">
+
+        <EditText
+            fontPath="fonts/GT_Pressura_Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="left|center"
+            android:inputType="text"
+            android:lines="1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:background="#d9d9d9">
+
+        <ImageView
+            android:id="@+id/ivCategory"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/homesel" />
+
+        <ImageView
+            android:id="@+id/ivadd"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:layout_toRightOf="@+id/ivCategory"
+            android:src="@drawable/ic_add" />
+
+        <ImageView
+            android:id="@+id/ivwallet"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:layout_toLeftOf="@+id/ivProf"
+            android:src="@drawable/ic_wallet" />
+
+        <ImageView
+            android:id="@+id/ivProf"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:src="@drawable/ic_prof" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivAddReview"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/star" />
+
+</RelativeLayout>

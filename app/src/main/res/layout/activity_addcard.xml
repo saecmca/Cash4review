@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cash4review.payment.Addcard"
+    tools:ignore="MissingPrefix">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/tvTit"
+                fontPath="fonts/GT_Pressura_Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="PAYMENT"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingPrefix" />
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ic_login" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etUsernameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColorHint="@color/black">
+
+            <EditText
+                android:id="@+id/etUsername"
+                fontPath="fonts/GT_Pressura_Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CARD NAME"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColorHint="@color/black">
+
+            <EditText
+                android:id="@+id/etPwd"
+                fontPath="fonts/GT_Pressura_Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="45XXXXXXXXX123"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/etDateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColorHint="@color/black">
+
+            <EditText
+                android:id="@+id/etdate"
+                fontPath="fonts/GT_Pressura_Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="EXP DATE"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <CheckBox
+        fontPath="fonts/GT_Pressura_Regular.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:text="Save your card" />
+
+    <Button
+        android:textSize="@dimen/_16sdp"
+        android:id="@+id/bntAdd"
+        fontPath="fonts/GT_Pressura_Bold.ttf"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorAccent"
+        android:text="ADD CARD"
+        android:textColor="@color/white" />
+</LinearLayout>

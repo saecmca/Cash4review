@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/back" />
+
+            <TextView
+                fontPath="fonts/GT_Pressura_Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/logo"
+                android:layout_toRightOf="@+id/back"
+                android:text="POST YOUR REVIEW"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ic_login" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_post_review"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/grey_border_round_rect"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_10sdp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Rate"
+                    android:textColor="@color/dark_text_gray"
+                    android:textSize="@dimen/_14sdp" />
+
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    style="@style/RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:stepSize="0.5" />
+            </LinearLayout>
+
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/spinner_bg"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_text_gray"
+                android:textSize="@dimen/_14sdp" />
+
+            <Spinner
+                android:id="@+id/spinner_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/spinner_bg"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_text_gray"
+                android:textSize="@dimen/_14sdp" />
+
+            <Spinner
+                android:id="@+id/spinner_location"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/spinner_bg"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_text_gray"
+                android:textSize="@dimen/_14sdp" />
+
+            <TextView
+                fontPath="fonts/GT_Pressura_Bold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="REVIEW"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_16sdp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_pro_review_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/grey_border_round_rect"
+                android:hint="SERVICE"
+                android:padding="@dimen/_5sdp"
+                android:textColorHint="@color/dark_text_gray"
+                app:counterEnabled="true"
+                app:counterMaxLength="100">
+
+                <EditText
+                    android:id="@+id/edit_pro_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_gravity="center|top|left"
+                    android:background="@null"
+                    android:gravity="center|top|left"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_pro_review_anbience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/grey_border_round_rect"
+                android:hint="AMBIENCE"
+                android:padding="@dimen/_5sdp"
+                android:textColorHint="@color/dark_text_gray"
+                app:counterEnabled="true"
+                app:counterMaxLength="100">
+
+                <EditText
+                    android:id="@+id/edit_pro_review_ambience"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_gravity="center|top|left"
+                    android:background="@null"
+                    android:gravity="center|top|left"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_pro_review_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/grey_border_round_rect"
+                android:hint="PRODUCT / ITEM"
+                android:padding="@dimen/_5sdp"
+                android:textColorHint="@color/dark_text_gray"
+                app:counterEnabled="true"
+                app:counterMaxLength="100">
+
+                <EditText
+                    android:id="@+id/edit_pro_review_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_gravity="center|top|left"
+                    android:background="@null"
+                    android:gravity="center|top|left"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableLeft="@drawable/cam_icon"
+                android:gravity="center|left"
+                android:layout_gravity="center|left"
+                android:drawablePadding="@dimen/_10sdp"
+                android:text="PLEASE POST YOUR BILL HERE"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_poc"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/round_rect_blue_border"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/capture" />
+
+                <Button
+                    android:id="@+id/img_camera"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@id/img_poc"
+                    android:background="@drawable/cam_icon"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_post_review"
+        fontPath="fonts/GT_Pressura_Bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:text="Post &amp; EARN"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp" />
+</RelativeLayout>
